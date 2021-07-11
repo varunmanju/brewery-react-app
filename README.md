@@ -29,7 +29,8 @@ In the app.py file there is an @app.route method that implements the GET api cal
         
 Now lets consider the App.js frontend file present in src folder.
 
-In this file the main 
+In this file the statements const [num,setNum]=useState([]),const [num1,setNum1]=useState(""),const [input, setInput] = useState(""); store the 
+
 
 
 
