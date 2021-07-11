@@ -24,19 +24,12 @@ The code repo comprises of the app.py backend flask application and the frontend
 
 In the app.py file there is an @app.route method that implements the GET api call.The frontend react application calls this api vis the fetch method url https://hidden-tor-29864.herokuapp.com/breweries/search?query=${input}.The backend code then takes in this api call from the frontend server, passes the input given by the user in the search bar present in the frontend as a parameter and then calls the external api server via the url https://api.openbrewerydb.org/breweries/search?query=' str(list).Here list is the input parameter that the frontend passes to the backend.The results of the query are returned to the frontend fetch function in json format.
 
-@app.route("/breweries/search",methods=["GET"])
-@cross_origin()
-def home():
-    list = request.args.get('query', None)
-    if(list):
-        url='https://api.openbrewerydb.org/breweries/search?query='+ str(list)
-        breweries=requests.get(url)
-        data=breweries.content
-        l=[]
-        brew=json.loads(data)
-        brew2=json.loads(data)
-        for i in range(len(brew2)):
-            brew[i]=dict(brew[i])
-        return jsonify(brew)
-Now lets consider the App.js frontend file.
+![Screen Shot 2021-07-11 at 10 49 22 PM](https://user-images.githubusercontent.com/82792752/125204328-50995880-e29a-11eb-8074-0a24a63a0b95.png)
+
+        
+Now lets consider the App.js frontend file present in src folder.
+
+In this file the main 
+
+
 
