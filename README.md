@@ -20,3 +20,6 @@ Also on clicking on the website link the user is redirected to the brewery websi
 
 Code repo:
 
+The code repo comprises of the app.py backend flask application and the frontend React application code ( App.js).
+
+In the app.py file  
