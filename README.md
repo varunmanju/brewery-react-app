@@ -22,4 +22,18 @@ Code repo:
 
 The code repo comprises of the app.py backend flask application and the frontend React application code ( App.js).
 
-In the app.py file  
+In the app.py file there is an @app.route method that implements the GET api call.The frontend react application calls this api vis the fetch method url 
+@app.route("/breweries/search",methods=["GET"])
+@cross_origin()
+def home():
+    list = request.args.get('query', None)
+    if(list):
+        url='https://api.openbrewerydb.org/breweries/search?query='+ str(list)
+        breweries=requests.get(url)
+        data=breweries.content
+        l=[]
+        brew=json.loads(data)
+        brew2=json.loads(data)
+        for i in range(len(brew2)):
+            brew[i]=dict(brew[i])
+        return jsonify(brew)
