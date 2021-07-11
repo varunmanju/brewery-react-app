@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  background-color: #282f3467;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+}
+.element{
+  text-align: center;
+  border: 3px solid green;
+  margin:10px 10px 10px 10px;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pes{
+  margin:25px 25px 25px 25px;
+}
+.search{
+  margin:10px 10px 10px 10px;
+}
