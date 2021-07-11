@@ -19,7 +19,6 @@ function App() {
     alert(val.name);
   }
   const [num,setNum]=useState([])
-  const [num1,setNum1]=useState("")
   const [input, setInput] = useState("");
   
   const clear = () => {
