@@ -38,5 +38,5 @@ Call Stack:
 
 ![Untitled Diagram (6)](https://user-images.githubusercontent.com/82792752/125205362-72490e80-e29f-11eb-85ee-4e1079ce9d8e.png)
 
-
+The React frontend first calls the flask backend via https://hidden-tor-29864.herokuapp.com/breweries/search?query=${input}. The flask backend then calls the external brewery api server via https://api.openbrewerydb.org/breweries/search?query=' str(list).The external api server fetches the contents from an openbrewery postgresql database server and then returns it back to the external api server.Then the external api server returns the content to the flask backend server and the flask backend server back to the frontend react application where the results are displayed.
 
