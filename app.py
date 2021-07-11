@@ -13,7 +13,7 @@ import json
 
 
 
-
+# Instanciate the app
 app=Flask(__name__,static_folder='brewery/build',static_url_path='')
 CORS(app)
 
@@ -22,7 +22,7 @@ CORS(app)
 
    
     
-
+# rest api that implements the search functionality.
 @app.route("/breweries/search",methods=["GET"])
 @cross_origin()
 def home():
@@ -37,7 +37,8 @@ def home():
         for i in range(len(brew2)):
             brew[i]=dict(brew[i])
         return jsonify(brew)
-
+   
+#used by heroku so that the build can be identified
 @app.route('/')
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
