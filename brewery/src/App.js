@@ -4,6 +4,7 @@ import React, { useState ,useEffect} from 'react';
 import Message from "./components/Message";
 import {Container,Card} from "react-bootstrap";
 
+// Bootstrap CDN.
 
 <link
   rel="stylesheet"
@@ -11,7 +12,7 @@ import {Container,Card} from "react-bootstrap";
   integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
   crossorigin="anonymous"
 />
-
+// The main app component that implements the core logic of the program.
 function App() {
 
   function display({val}) {
@@ -37,6 +38,7 @@ function App() {
             alert("error");
         });
 };
+    //Card component that has the details of the brewery
   const brew = num.map(val =>(
     <>
 
@@ -73,7 +75,8 @@ function App() {
      
      </> 
   ));
-  
+
+//Elements under the return statement are displayed on the screen.
   return (
 <div className="App"  >
   <h1> Brewery Listings </h1>
