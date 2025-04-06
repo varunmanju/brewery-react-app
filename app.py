@@ -28,7 +28,7 @@ CORS(app)
 def home():
     list = request.args.get('query', None)
     if(list):
-        url='https://api.openbrewerydb.org/breweries/search?query='+ str(list)
+        url='https://api.openbrewerydb.org/v1/breweries/autocomplete?query='+ str(list)
         breweries=requests.get(url)
         data=breweries.content
         l=[]
